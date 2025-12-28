@@ -159,6 +159,9 @@ Lists all servers with their configurations that are assigned to the requesting 
 }
 ```
 
+> [!TIP]
+> The `mounts` field can also be defined as an array of objects with the fields `source` (string), `target` (string) and `read_only` (boolean).
+
 ### Sources
 
 - [ServerDetailsController.php#L48](https://github.com/pterodactyl/panel/blob/43f7c106172a68f9d81c84af34735373dc900395/app/Http/Controllers/Api/Remote/Servers/ServerDetailsController.php#L48)
