@@ -145,16 +145,16 @@ Disconnects user from server websockets and SFTP sessions.
 
 ### Body
 
-| Field    | Visibility | Type            | Description                |
-| -------- | ---------- | --------------- | -------------------------- |
+| Field    | Visibility | Type            | Description                     |
+| -------- | ---------- | --------------- | ------------------------------- |
 | user     | required   | string          | The UUID of the user to deny.   |
 | servers  | required   | array of string | A list of server UUIDs to deny. |
 
 ### Responses
 
-| Code | Description                           |
-| ---- | ------------------------------------- |
-| 204  | The request was successful.           |
+| Code | Description                 |
+| ---- | --------------------------- |
+| 204  | The request was successful. |
 
 Sources:
 

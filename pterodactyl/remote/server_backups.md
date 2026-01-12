@@ -50,15 +50,15 @@ Handles updating the state of a backup.
 
 ### Body
 
-| Name                | Visibility                  | Type    | Description                                                   |
-| ------------------- | --------------------------- | ------- | ------------------------------------------------------------- |
-| successful          | required                    | boolean | The success state of the backup.                              |
-| checksum            | required if success is true | string  | The checksum.                                                 |
-| checksum_type       | required if success is true | string  | The checksum type.                                            |
-| size                | required if success is true | number  | The size of the backup.                                       |
-| parts               | optional                    | array   | An array containing the etag and part number for each part.   |
-| parts[].etag        | required                    | string  | The entity tag of an upload part. (for S3)                    |
-| parts[].part_number | required                    | number  | The part number of an upload part. (for S3)                   |
+| Name                | Visibility                  | Type    | Description                                                 |
+| ------------------- | --------------------------- | ------- | ----------------------------------------------------------- |
+| successful          | required                    | boolean | The success state of the backup.                            |
+| checksum            | required if success is true | string  | The checksum.                                               |
+| checksum_type       | required if success is true | string  | The checksum type.                                          |
+| size                | required if success is true | number  | The size of the backup.                                     |
+| parts               | optional                    | array   | An array containing the etag and part number for each part. |
+| parts[].etag        | required                    | string  | The entity tag of an upload part. (for S3)                  |
+| parts[].part_number | required                    | number  | The part number of an upload part. (for S3)                 |
 
 ### Example Body
 
