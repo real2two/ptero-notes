@@ -27,6 +27,17 @@ Returns the required presigned urls to upload a backup to S3 cloud storage.
 | 404  | The backup was not found.                                      |
 | 409  | The backup is already in completed state.                      |
 
+### Example Response
+
+```json
+{
+  "parts": [
+    "https://example.com/s3_url_here"    
+  ],
+  "part_size": 1234
+}
+```
+
 ### Sources
 
 - [BackupRemoteUploadController.php#L33](https://github.com/pterodactyl/panel/blob/43f7c106172a68f9d81c84af34735373dc900395/app/Http/Controllers/Api/Remote/Backups/BackupRemoteUploadController.php#L33)
@@ -53,13 +64,16 @@ Handles updating the state of a backup.
 
 ```json
 {
-  "data": {
-    "checksum": "a0b124c3def45g67890h12i3j4567k8l9mn01234",
-    "checksum_type": "sha1",
-    "size": 1234,
-    "successful": true,
-    "parts": null
-  }
+  "checksum": "a0b124c3def45g67890h12i3j4567k8l9mn01234",
+  "checksum_type": "sha1",
+  "size": 1234,
+  "successful": true,
+  "parts": [
+    {
+      "etag": "\"fad65ead865d78b768d313644d411c16\"",
+      "part_number": 1
+    }
+  ]
 }
 ```
 
